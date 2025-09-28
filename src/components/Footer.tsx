@@ -1,3 +1,5 @@
+// static footer
+import Navigation from "./Navigation";
 import "../styles/Footer.css";
 
 const Footer = () => {
@@ -5,9 +7,13 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div>
-        <p>&copy; {currentYear} Yvette D. Hastings</p>
+      <div className="footer-left">
+        <Navigation />
+        <small className="footer-copy">
+          Copyright &copy; {currentYear} — Yvette D. Hastings
+        </small>
       </div>
+      {/* (Optional) add a <div className="footer-right">…</div> for anything else later */}
     </footer>
   );
 };

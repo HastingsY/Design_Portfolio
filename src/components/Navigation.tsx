@@ -16,12 +16,30 @@ const Navigation = () => {
       </NavLink>
 
       <NavLink
+        to="/education"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Education & Skills
+      </NavLink>
+
+      <NavLink
         to="/projects"
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
       >
         Projects
+      </NavLink>
+
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Contact
       </NavLink>
     </nav>
   );

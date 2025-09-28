@@ -18,7 +18,9 @@
   text-decoration: none;
   color: inherit;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
 /* Hover effect */
@@ -49,4 +51,75 @@
 .card-desc {
   margin: 0;
   color: #444;
+}
+
+/* Master-detail shell when a project is selected */
+.projects-shell {
+  display: grid;
+  grid-template-columns: min(38vw, 420px) 1fr; /* left rail + right detail */
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 12px auto 0;
+}
+
+/* Left: horizontal rail of smaller cards */
+.card-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-x: auto;
+  padding-right: 8px;
+  padding-left: 10px;
+}
+
+.project-card--mini {
+  width: 260px;
+}
+.project-card--mini img {
+  height: 120px;
+}
+.project-card--mini .card-body {
+  padding: 10px 12px 12px;
+}
+
+/* Highlight the active card */
+.project-card.is-active {
+  outline: 3px solid rgba(59, 105, 231, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Right: detail panel */
+.project-detail {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px;
+  min-height: 320px;
+  min-width: 700px;
+}
+
+.detail-topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.back-to-grid {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0a58ca;
+}
+.back-to-grid:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .projects-shell {
+    grid-template-columns: 1fr;
+  }
+  .detail-topbar {
+    justify-content: flex-start;
+  }
 }

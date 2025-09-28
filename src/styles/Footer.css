@@ -1,15 +1,67 @@
 /* Stylesheet for footer */
+/* Footer container: fixed, full-width, left-aligned content */
 .footer {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(13, 72, 160);
-  color: rgb(189, 199, 243);
   width: 100vw;
   box-sizing: border-box;
+  background: #0d48a0;
+  color: #eaf1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  padding: 10px 16px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Turn the left column into a centered stack */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Horizontal nav in the footer */
+.footer .nav {
+  display: flex;
+  flex-direction: row; /* inline like the header */
+  gap: 18px;
+  margin: 0;
+}
+
+/* Footer link look (reuse header styles but scoped) */
+.footer .nav-link {
+  color: #eaf1ff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 9999px;
+}
+
+.footer .nav-link:visited {
+  color: #eaf1ff;
+}
+.footer .nav-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.footer .nav-link.active {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.footer-copy {
+  font-size: 0.92rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Mobile: stack the links for comfortable taps */
+@media (max-width: 640px) {
+  .footer .nav {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
 }
