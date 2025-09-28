@@ -1,0 +1,15 @@
+/* Stylesheet for footer */
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(13, 72, 160);
+  color: rgb(189, 199, 243);
+  width: 100vw;
+  box-sizing: border-box;
+}
