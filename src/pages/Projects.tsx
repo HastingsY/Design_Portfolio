@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import cooking from "../assets/cooking.png";
 import LL from "../assets/LLsite.jpg";
-import pique from "../assets/PIQUE_logo2.jpg";
+import pique from "../assets/PIQUE_logo.png";
 import PIQUEViz from "./PIQUEViz";
 import EnvironmentalDashboard from "./EnvironmentalDashboard";
 import CookingApp from "./CookingApp";
@@ -21,21 +21,21 @@ const Projects = () => {
       slug: "pique",
       path: "/projects/pique",
       img: pique,
-      desc: "An interactive Quality-in-Use visualizer for PIQUE scores and factors.",
+      desc: "An interactive visualizer for PIQUE software quality assessment scores and details.",
     },
     {
       title: "Environmental Monitoring Dashboard",
       slug: "environment",
       path: "/projects/environment",
       img: LL,
-      desc: "Live charts and alerts for environmental metrics and field sensors.",
+      desc: "An interactive environmental monitoring dashboard, displaying site map, hydrographs, and water chemistry.",
     },
     {
       title: "Cooking App",
       slug: "cooking",
       path: "/projects/cooking",
       img: cooking,
-      desc: "Plan meals, track ingredients, and visualize nutrition at a glance.",
+      desc: "Engaging app to plan meals, track ingredients, and visualize nutrition at a glance.",
     },
   ];
 
@@ -100,7 +100,7 @@ const Projects = () => {
             <div className="project-detail">
               <div className="detail-topbar">
                 <Link to="/projects" className="back-to-grid">
-                  ← Back to project thumbnail list
+                  ← Close project details
                 </Link>
               </div>
               {renderDetail()}

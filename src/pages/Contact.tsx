@@ -4,7 +4,7 @@ import "../styles/Pages.css";
 import { Link } from "@react-email/components";
 
 const Email = () => {
-  return <Link href="yvettehastings@montana.edu">Contact Me</Link>;
+  return <Link href="yvettehastings@montana.edu">yvettehastings@montana.edu</Link>;
 };
 
 export const Contact = () => {
@@ -16,7 +16,7 @@ export const Contact = () => {
           <h2>
             <strong>Contact Me </strong>
           </h2>
-          <p>Email {<Email />}</p>
+          <p>Email: {<Email />}</p>
         </div>
       </main>
       <Footer />
