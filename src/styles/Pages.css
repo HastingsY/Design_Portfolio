@@ -84,3 +84,26 @@ body,
   top: 15px;
   z-index: 1;
 }
+
+.picture {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.aboutMeText {
+  margin-left: 40px;
+  font-size: 18px;
+}
+
+.pageTitle {
+  margin-top: 50px;
+  font-size: 30px;
+}

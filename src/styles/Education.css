@@ -1,0 +1,13 @@
+.logos {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.UofU {
+  height: 100px;
+}
+
+.MSU {
+  height: 100px;
+}

@@ -56,7 +56,7 @@
 /* Master-detail shell when a project is selected */
 .projects-shell {
   display: grid;
-  grid-template-columns: min(38vw, 420px) 1fr; /* left rail + right detail */
+  grid-template-columns: min(38vw, 380px) 1fr; /* left rail + right detail */
   align-items: start;
   width: 100%;
   max-width: 1200px;

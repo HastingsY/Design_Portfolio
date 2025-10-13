@@ -6,11 +6,11 @@ const Header = () => {
   return (
     <header className="header">
       <div>
-        <h1>Design Portfolio</h1>
+        <h1>Yvette D. Hastings</h1>
       </div>
 
       <div>
-        <h2>Yvette D. Hastings</h2>
+        <h2>Design Portfolio</h2>
       </div>
 
       <hr />
