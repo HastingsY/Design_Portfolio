@@ -56,9 +56,9 @@ const Projects = () => {
     <div className="app-container">
       <Header />
       <main className="main-content">
-        <h3>
+        <h2>
           <strong>Projects</strong>
-        </h3>
+        </h2>
 
         {!selected ? (
           // Default: full grid

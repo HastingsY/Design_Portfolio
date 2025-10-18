@@ -21,7 +21,7 @@ const Navigation = () => {
           isActive ? "nav-link active" : "nav-link"
         }
       >
-        Education & Skills
+        Skills & Experience
       </NavLink>
 
       <NavLink
