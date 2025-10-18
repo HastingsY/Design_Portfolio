@@ -18,7 +18,7 @@ export const Contact = () => {
           <h2>
             <strong>Contact Me </strong>
           </h2>
-          <p>Email {<Email />}</p>
+          <p>Email: {<Email />}</p>
         </div>
       </main>
       <Footer />
