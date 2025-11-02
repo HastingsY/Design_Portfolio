@@ -35,7 +35,6 @@
   display: block;
   width: 100%;
   height: 160px;
-  /* tweak as you like */
   object-fit: cover;
 }
 
@@ -59,10 +58,10 @@
 /* Master-detail shell when a project is selected */
 .projects-shell {
   display: grid;
-  grid-template-columns: min(30vw, 450px) 1fr; /* left rail + right detail */
+  grid-template-columns: 25% 60%;
+  column-gap: 5%;
   align-items: start;
   width: 100%;
-  max-width: 1200px;
   margin: 20px auto 0;
 }
 
@@ -105,8 +104,10 @@
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   padding: 16px 20px;
+  margin-bottom: 20px;
   min-height: 320px;
-  min-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .detail-topbar {

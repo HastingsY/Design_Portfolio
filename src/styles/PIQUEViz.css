@@ -1,17 +1,3 @@
-.mockUp {
-  height: 400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.LLfinal {
-  height: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .funding {
   display: flex;
   align-items: flex-start;
@@ -21,7 +7,7 @@
   margin-left: 10px;
 }
 
-.ESS-logo {
+.MSU-logo {
   width: 80px;
   height: auto;
   border-radius: 8px;
@@ -38,8 +24,4 @@
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 16px;
-}
-
-.brainstorming {
-  padding-left: 10px;
 }

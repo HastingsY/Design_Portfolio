@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/Pages.css";
@@ -49,14 +49,15 @@ const LandingPage = () => {
             <img className="picture" src={picture} />
             <p className="aboutMeText">
               Hi there! I'm Yvette Hastings. I'm an analytical chemist turned
-              software engineer. My journey to software engineering began with a
-              question: how can scientists better communicate their work and
-              findings to policy makers? That question led me to a career change
-              and sparked a deep interest in bridging science and technology.
-              During my continued education, I explored a range of scientific
-              disciplines and developed a strong curiosity for data science and
-              visualization. My curiosity grew even deeper during my master's
-              degree and I’ve been hooked ever since.
+              UI/UX focued software engineer. My journey to software engineering
+              began with a question: how can scientists better communicate their
+              work and findings to policy makers? That question led me to a
+              career change and sparked a deep interest in bridging the gap
+              between science and technology. During my continued education, I
+              explored a range of scientific disciplines and developed a strong
+              curiosity for data science and visualization. My curiosity grew
+              even deeper during my master's degree and I’ve been hooked ever
+              since.
               <br />
               <br />
               Today, I focus on improving software quality by understanding what
@@ -68,22 +69,31 @@ const LandingPage = () => {
               share.
               <br />
               <br />I love connecting with others, learning about their work,
-              and finding creative ways to make their ideas more impactful.
-              Outside of work, I enjoy hiking, spending time with friends, and
-              learning about new cultures. Feel free to reach out if you'd like
-              to connect, learn more about me, or would like to chat about data
-              visualization. You can also view my academic and professional
-              journey by clicking the "Curriculum Vitae" button below. To view
-              my most recent projects, click on the "Projects" button below or
-              on the site navigation bar.
+              and finding creative ways to make ideas and insights accessible
+              and impactful. Outside of work, I enjoy hiking, spending time with
+              friends, and exploring new cultures.
+              <br />
+              <br />
+              Feel free to reach out via the{" "}
+              <Link to="/contact" className="back-to-grid">
+                Contact
+              </Link>{" "}
+              page or the email and LinkedIn icons below. You can also learn
+              more about my journey on the{" "}
+              <Link to="/education" className="back-to-grid">
+                Skills & Experience
+              </Link>{" "}
+              page, view my Curriculum Vitae via the button below, or explore my
+              latest projects on the{" "}
+              <Link to="/projects" className="back-to-grid">
+                Projects
+              </Link>{" "}
+              page.
               <br />
               <br />
               <div className="btn-row">
                 <button className="CV" onClick={openModal}>
                   Curriculum Vitae
-                </button>
-                <button className="CV" onClick={handleButtonClick}>
-                  Projects
                 </button>
               </div>
             </p>
