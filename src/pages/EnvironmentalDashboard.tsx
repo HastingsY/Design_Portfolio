@@ -28,12 +28,12 @@ const EnvironmentalDashboard = () => (
       that incorporates hydrological information, site location and pictures,
       environmental chemistry data, and maintenance resource information.
     </p>
-    <h4>Implication</h4>
+    <h4>Benefits</h4>
     <p>
       With this information, research teams can determine the site's successes
       or failures. Additionally, researchers are able to plan additional design
       implementations to improve enviromental quality and reduce resource usage
-      and costs to the university.
+      and costs to the university. Finally, citizen scientists can view and monitor changes to the site.
     </p>
     <h4>Tools</h4>
     Several tools were utilized to design and develop the environmental
