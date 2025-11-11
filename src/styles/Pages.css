@@ -7,6 +7,10 @@ body,
   background: #ffffff;
 }
 
+:root {
+  --header-offset: 300px;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -41,6 +45,35 @@ body,
 }
 .main-content a:hover {
   text-decoration: underline;
+}
+
+.card-rail {
+  position: sticky; /* magic */
+  top: var(--header-offset, 16px); /* clear your fixed header if needed */
+  align-self: start; /* ensure it starts at the top of its grid cell */
+  max-height: calc(
+    100vh - var(--header-offset, 16px) - 16px
+  ); /* full viewport height minus header + a little padding */
+  overflow-y: auto; /* vertical scroll inside the rail */
+  overflow-x: hidden; /* no horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 8px;
+}
+
+/* Optional: give the rail a subtle background so it feels “pinned” */
+.card-rail {
+  background: #fff;
+}
+
+/* On small screens, stack normally (no sticky) */
+@media (max-width: 900px) {
+  .card-rail {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 /* Back link row sits under the fixed header, aligned left */

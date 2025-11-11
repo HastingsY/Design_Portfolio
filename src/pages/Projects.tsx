@@ -17,6 +17,13 @@ const Projects = () => {
 
   const items = [
     {
+      title: "Cooking App",
+      slug: "cooking",
+      path: "/projects/cooking",
+      img: cooking,
+      desc: "Engaging app to plan meals, track ingredients, and visualize nutrition at a glance.",
+    },
+    {
       title: "PIQUE Visualizer",
       slug: "pique",
       path: "/projects/pique",
@@ -30,23 +37,16 @@ const Projects = () => {
       img: LL,
       desc: "An interactive environmental monitoring dashboard, displaying site map, hydrographs, and water chemistry.",
     },
-    {
-      title: "Cooking App",
-      slug: "cooking",
-      path: "/projects/cooking",
-      img: cooking,
-      desc: "Engaging app to plan meals, track ingredients, and visualize nutrition at a glance.",
-    },
   ];
 
   const renderDetail = () => {
     switch (slug) {
+      case "cooking":
+        return <CookingApp />;
       case "pique":
         return <PIQUEViz />;
       case "environment":
         return <EnvironmentalDashboard />;
-      case "cooking":
-        return <CookingApp />;
       default:
         return <p>Select a project from the left to view details.</p>;
     }

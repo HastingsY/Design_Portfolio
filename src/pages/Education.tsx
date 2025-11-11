@@ -34,7 +34,8 @@ const Education = () => {
               </li>
               <li>
                 <strong>Data Visualization: </strong>R ggplot2, plotly,
-                matplotlib, D3.js, Tableau, ArcGIS Pro
+                matplotlib, D3.js, react-gauge-components, and Recharts,
+                Tableau, ArcGIS Pro
               </li>
               <li>
                 <strong>Programming: </strong>R (Shiny, ggplot2, tidyverse,
@@ -64,7 +65,7 @@ const Education = () => {
               </li>
               <li>
                 <strong>Documentation: </strong>Overleaf, R Markdown/Quatro,
-                Docusaurus
+                Docusaurus, Adobe Express
               </li>
             </ul>
           </div>
@@ -105,8 +106,8 @@ const Education = () => {
               <img className="experience-logo-MSU" src={MSU} alt="MSU logo" />
               <div className="experience-text">
                 <h3>
-                  UI Designer, Montana State University Software Engineering and
-                  Cybersecurity Lab (2025)
+                  UI Designer & Developer, Montana State University Software
+                  Engineering and Cybersecurity Lab (2025)
                 </h3>
                 <p>
                   Designed and developed a web visualizer to display PIQUE
@@ -139,8 +140,8 @@ const Education = () => {
               <img className="experience-logo" src={ESS} alt="ESS logo" />
               <div className="experience-text">
                 <h3>
-                  UI Designer, University of Utah School of Environment, Society
-                  & Sustainability SAGE Lab (2022)
+                  UI Designer & Developer, University of Utah School of
+                  Environment, Society & Sustainability SAGE Lab (2022)
                 </h3>
                 <p>
                   Designed an environmental dashboard showcasing water quality,
