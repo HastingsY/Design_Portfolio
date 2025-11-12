@@ -3,9 +3,6 @@ import LandingPage from "./pages/LandingPage";
 import Education from "./pages/Education";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import PIQUEViz from "./pages/PIQUEViz";
-import EnvironmentalDashboard from "./pages/EnvironmentalDashboard";
-import CookingApp from "./pages/CookingApp";
 
 function App() {
   return (
