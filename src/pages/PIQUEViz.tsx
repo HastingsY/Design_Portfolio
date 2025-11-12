@@ -213,7 +213,9 @@ const PIQUEViz: React.FC = () => {
           quality. This provides stakeholders with insight on what aspects are
           hindering software quality and what actions they can take to improve
           their software quality.{" "}
-          <strong>Note: This project is still ongoing.</strong>
+          <strong>
+            Note: This project is still ongoing and is not web accessible yet.
+          </strong>
         </p>
 
         <figure className="project-figure">
@@ -245,12 +247,34 @@ const PIQUEViz: React.FC = () => {
         </figure>
       </section>
 
+      <section className="project-section">
+        <h3>Reflection</h3>
+        <p>
+          This project deepened my understanding of designing web-based
+          visualizers that balance clarity for non-technical stakeholders with
+          depth for engineers. Collaboration across teams improved my ability to
+          translate feedback into concrete interaction patterns (e.g.,
+          comparison highlights and reset/filters), communicate design
+          rationale, and iterate quickly within technical constraints. Next, I’d
+          perform user testing and run a short task-based study to quantify time
+          saved when identifying regressions across versions.
+        </p>
+      </section>
+
       <hr />
       <div className="funding">
         <img className="ESS-logo" src={MSU} alt="MSU logo" />
         <div className="funding-text">
-          This project was funded through the Montana State University Software
-          Engineering and Cybersecurity Labs.
+          This project was funded through the{" "}
+          <a
+            href="https://montana.edu/cyber"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Montana State University Software Engineering and Cybersecurity
+            Laboratory
+          </a>
+          .
         </div>
       </div>
 

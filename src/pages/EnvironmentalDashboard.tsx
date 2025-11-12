@@ -201,12 +201,31 @@ const EnvironmentalDashboard: React.FC = () => {
         </figure>
       </section>
 
+      <section className="project-section">
+        <h3>Reflection</h3>
+        <p>
+          This project strengthened my ability to design interfaces that serve
+          diverse stakeholder needs, from researchers to facilities staff. I
+          also expanded my frontend development skills beyond standard UI
+          libraries by building custom visualizations and map interactions in
+          RShiny.
+        </p>
+      </section>
+
       <hr />
       <div className="funding">
         <img className="ESS-logo" src={ESS} alt="ESS logo" />
         <div className="funding-text">
-          This project was funded through the University of Utah's School of
-          Environment, Society & Sustainability SAGE Lab.
+          This project was funded through the{" "}
+          <a
+            href="https://ess.utah.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Utah's School of Environment, Society & Sustainability
+            SAGE Lab
+          </a>
+          .
         </div>
       </div>
 

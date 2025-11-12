@@ -109,20 +109,14 @@ const CookingApp: React.FC = () => {
             <strong>User Interviews & Testing:</strong> MS Teams, Google Forms
           </li>
           <li>
-            <strong>Empathy Mapping & Persona Generation:</strong> Draw.io, Miro
-          </li>
-          <li>
-            <strong>Information Architecture & User Flows:</strong> Figma or
-            Lucidchart
+            <strong>Empathy Mapping & Persona Generation:</strong> Draw.io,
+            Adobe Express
           </li>
           <li>
             <strong>Low- & High-Fidelity Prototyping:</strong> Adobe XD
           </li>
           <li>
             <strong>Branding & Icons:</strong> Material Design
-          </li>
-          <li>
-            <strong>Accessibility Testing:</strong> Contrast Checker
           </li>
         </ul>
       </section>
@@ -153,31 +147,20 @@ const CookingApp: React.FC = () => {
         <div className="subsection">
           <p>
             <strong>Empathy Mapping & Persona Development</strong> — Developed
-            empathy maps and user personas to represent primary user groups such
-            as Busy Students, Young Professionals, and Health-Conscious
-            Beginners. These personas guided design priorities such as fast
-            recipe discovery, grocery list integration, and AI-driven
-            personalization.
+            empathy maps and user personas to represent primary user groups of
+            busy students and young professionals. These personas guided design
+            priorities such as fast recipe discovery, grocery list integration,
+            and AI-driven personalization.
           </p>
         </div>
 
         <div className="subsection">
           <p>
-            <strong>Information Architecture & User Flow</strong> — Mapped user
-            flows for core interactions including finding recipes, generating AI
-            meal plans, and joining virtual cooking classes. This helped ensure
-            intuitive navigation and minimized cognitive load for first-time
-            users.
-          </p>
-        </div>
-
-        <div className="subsection">
-          <p>
-            <strong>Business Modeling</strong> — Outlined potential monetization
-            strategies, including freemium access with premium recipe packs and
-            virtual class subscriptions. Considered partnerships with local
-            grocers for ingredient delivery integration and brand sponsorships
-            for cookware or health products.
+            <strong>Business Modeling & Mind Mapping</strong> — Outlined
+            potential monetization strategies, including freemium access with
+            premium recipe packs and virtual class subscriptions. Considered
+            partnerships with local grocers for ingredient delivery integration
+            and brand sponsorships for cookware or health products.
           </p>
         </div>
 
@@ -238,11 +221,11 @@ const CookingApp: React.FC = () => {
             <em>accessibility and consistency principles</em>, ensuring that
             colors meet contrast ratios and icons follow industry standards.
             Focused on <em>visibility of system status</em> (e.g., showing
-            loading indicators during recipe generation),
+            loading indicators during recipe generation),{" "}
             <em>user control and freedom</em> (e.g., the ability to cancel
             recipe generation or remove ingredients), and{" "}
             <em>error prevention</em> (e.g., filtering out allergens or
-            unavailable ingredients). Emphasized
+            unavailable ingredients). Emphasized{" "}
             <em>recognition rather than recall</em> by keeping recent recipes,
             shopping lists, and preferences visible on the main page.
           </p>
@@ -253,10 +236,9 @@ const CookingApp: React.FC = () => {
             <strong>UX Laws</strong> — Guided by <em>Hick’s Law</em> to limit
             choices per screen and simplify user flow; <em>Fitts’s Law</em> by
             making key actions (e.g., “Add Ingredient,” “Generate Recipe”) large
-            and easy to reach;
-            <em>Miller’s Law</em> by grouping related information (e.g.,
-            nutritional facts, cooking time, ingredients); and{" "}
-            <em>Jakob’s Law</em> by using familiar icons and interaction
+            and easy to reach; <em>Miller’s Law</em> by grouping related
+            information (e.g., nutritional facts, cooking time, ingredients);
+            and <em>Jakob’s Law</em> by using familiar icons and interaction
             patterns common in recipe and shopping apps.
           </p>
         </div>
@@ -271,14 +253,14 @@ const CookingApp: React.FC = () => {
 
         <div className="subsection">
           <p>
-            <strong>Design Process Documentation:</strong> — All design stages,
+            <strong>Design Process Documentation</strong> — All design stages,
             from market analysis to the high-fidelity prototype, were
             documented.
           </p>
           <p>
             You can explore the Design Process Documentation here:{" "}
             <a
-              href=""
+              href="https://new.express.adobe.com/webpage/YymhqsgX752Mw"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
@@ -293,7 +275,7 @@ const CookingApp: React.FC = () => {
         <h3>Outcome</h3>
         <p>
           The final prototype offers users an accessible and enjoyable cooking
-          experience, enabling them to plan meals, generate recipes from
+          experience, enabling users to plan meals, generate recipes from
           available ingredients, and join interactive virtual cooking classes.
           Future iterations will focus on enhancing personalization and
           integrating nutrition tracking.
@@ -303,11 +285,13 @@ const CookingApp: React.FC = () => {
       <section className="project-section">
         <h3>Reflection</h3>
         <p>
-          This project strengthened my understanding of designing mobile
-          experiences for everyday usability. Collaborating in a
-          multidisciplinary team improved my ability to communicate design
-          rationale, balance user needs with technical constraints, and
-          iteratively refine prototypes based on feedback.
+          This work sharpened my approach to mobile UX: prioritizing choice
+          reduction, clear hierarchy, and accessible controls for fast,
+          low-friction tasks. Collaborating in a multidisciplinary team helped
+          me articulate trade-offs, defend design decisions with user evidence,
+          and iterate prototypes based on testing feedback. A natural next step
+          is moderated usability sessions to validate meal-plan flows and refine
+          the grocery list handoff.
         </p>
       </section>
 
@@ -315,8 +299,15 @@ const CookingApp: React.FC = () => {
       <div className="funding">
         <img className="ESS-logo" src={MSU} alt="MSU logo" />
         <div className="funding-text">
-          This project was completed as a course project for the Montana State
-          University UI Design course.
+          This project was completed as a course project for the{" "}
+          <a
+            href="https://www.cs.montana.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Montana State University Computer Science
+          </a>{" "}
+          UI Design course.
         </div>
       </div>
 

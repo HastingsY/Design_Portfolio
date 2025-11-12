@@ -79,23 +79,24 @@ figcaption {
 }
 .project-figure {
   display: grid;
-  gap: 12px;
-}
-@media (min-width: 900px) {
-  .project-figure {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
-/* Responsive grid you asked for */
-.project-figure {
-  display: grid;
-  gap: 12px;
-}
-.project-figure .project-image {
+.project-image {
   width: 100%;
-  cursor: zoom-in;
+  max-width: 350px; /* adjust to taste */
+  height: auto;
+  aspect-ratio: 3 / 2; /* keeps proportions consistent */
+  object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
+  cursor: zoom-in;
 }
 @media (min-width: 900px) {
   .project-figure {
