@@ -16,6 +16,15 @@ const Navigation = () => {
       </NavLink>
 
       <NavLink
+        to="/CV"
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+      >
+        Curriculum Vitae
+      </NavLink>
+
+      <NavLink
         to="/education"
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"

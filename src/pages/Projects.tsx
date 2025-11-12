@@ -56,9 +56,12 @@ const Projects = () => {
     <div className="app-container">
       <Header />
       <main className="main-content">
-        <h2>
+        <h2 className="pageTitle">
           <strong>Projects</strong>
         </h2>
+        <p className="instructions">
+          <strong>Click on a project card to view details.</strong>
+        </p>
 
         {!selected ? (
           // Default: full grid

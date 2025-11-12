@@ -174,6 +174,14 @@ const EnvironmentalDashboard: React.FC = () => {
             visualizations effectively.
           </p>
         </div>
+
+        <div className="subsection">
+          <p>
+            <strong>Usability Testing</strong> — Usability testing with
+            stakeholders was done to ensure the dashboard was navigatable and
+            readable.
+          </p>
+        </div>
       </section>
 
       <section className="project-section">

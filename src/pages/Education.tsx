@@ -17,11 +17,9 @@ const Education = () => {
       <Header />
       <main className="main-content">
         <div>
-          <p className="statement">
-            Creative UI/UX designer, software engineer, and problem-solver
-            passionate about creating intuitive, clean interfaces designed to
-            communicate complex data.
-          </p>
+          <h2 className="pageTitle">
+            <strong>Skills & Experience</strong>
+          </h2>
           <div className="education-cards">
             <h2>
               <ExtensionIcon className="Icon technical" fontSize="large" />

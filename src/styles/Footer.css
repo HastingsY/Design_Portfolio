@@ -18,61 +18,6 @@
   gap: 1rem;
 }
 
-.footer-right {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  margin-right: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.social-link {
-  display: inline-flex;
-  color: white;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  color: #72aff0;
-}
-
-/* Turn the left column into a centered stack */
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Horizontal nav in the footer */
-.footer .nav {
-  display: flex;
-  flex-direction: row; /* inline like the header */
-  gap: 18px;
-  margin: 0;
-}
-
-/* Footer link look (reuse header styles but scoped) */
-.footer .nav-link {
-  color: #eaf1ff;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 9999px;
-}
-
-.footer .nav-link:visited {
-  color: #eaf1ff;
-}
-.footer .nav-link:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-.footer .nav-link.active {
-  background: rgba(255, 255, 255, 0.22);
-}
-
 .footer-copy {
   font-size: 0.92rem;
   opacity: 0.9;

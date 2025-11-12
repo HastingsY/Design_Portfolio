@@ -114,6 +114,9 @@ const PIQUEViz: React.FC = () => {
             <strong>Data Visualization (Static & Dynamic):</strong> D3.js,
             react-gauge-components, and Recharts
           </li>
+          <li>
+            <strong>Documentation:</strong> Docusaurus
+          </li>
         </ul>
       </section>
 
@@ -201,6 +204,14 @@ const PIQUEViz: React.FC = () => {
             CWEs, Packages) to reduce cognitive load, and <em>Jakob’s Law</em>{" "}
             by following familiar dashboard conventions (tabs, filters,
             comparison diffing).
+          </p>
+        </div>
+
+        <div className="subsection">
+          <p>
+            <strong>Usability Testing</strong> — Usability testing with
+            stakeholders is planned to gather feedback on task flow,
+            readability, and icon clarity.
           </p>
         </div>
       </section>

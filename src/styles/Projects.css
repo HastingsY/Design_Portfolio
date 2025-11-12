@@ -1,11 +1,11 @@
 /* Projects grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
-  width: 100%;
-  max-width: 1200px;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: center;
   margin: 12px auto 0;
+  width: auto;
 }
 
 /* Card base */
@@ -140,4 +140,8 @@
   .detail-topbar {
     justify-content: flex-start;
   }
+}
+
+.instructions {
+  font-size: 18px;
 }
