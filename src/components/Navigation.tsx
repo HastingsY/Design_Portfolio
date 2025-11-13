@@ -2,15 +2,25 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 
-const Navigation = () => {
+type NavigationProps = {
+  isOpen: boolean;
+  onLinkClick: () => void;
+};
+
+const Navigation: React.FC<NavigationProps> = ({ isOpen, onLinkClick }) => {
   return (
-    <nav className="nav" aria-label="Primary">
+    <nav
+      id="primary-nav"
+      className={`nav ${isOpen ? "nav--open" : ""}`}
+      aria-label="Primary"
+    >
       <NavLink
         to="/"
         end
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
+        onClick={onLinkClick}
       >
         About Me
       </NavLink>
@@ -20,6 +30,7 @@ const Navigation = () => {
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
+        onClick={onLinkClick}
       >
         Curriculum Vitae
       </NavLink>
@@ -29,8 +40,9 @@ const Navigation = () => {
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
+        onClick={onLinkClick}
       >
-        Skills & Experience
+        Skills &amp; Experience
       </NavLink>
 
       <NavLink
@@ -38,6 +50,7 @@ const Navigation = () => {
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
+        onClick={onLinkClick}
       >
         Projects
       </NavLink>
@@ -47,6 +60,7 @@ const Navigation = () => {
         className={({ isActive }) =>
           isActive ? "nav-link active" : "nav-link"
         }
+        onClick={onLinkClick}
       >
         Contact
       </NavLink>
@@ -55,3 +69,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

@@ -5,6 +5,15 @@ import wireframe1 from "../assets/wireframe 1.png";
 import wireframe2 from "../assets/wireframe 2.png";
 import wireframe3 from "../assets/wireframe 3.png";
 import wireframe4 from "../assets/wireframe 4.png";
+import empathy1 from "../assets/P1 empthany.png";
+import empathy2 from "../assets/P2 empathy map.png";
+import empathy3 from "../assets/empathy map 3.png";
+import empathy4 from "../assets/empathy map 4.png";
+import empathy5 from "../assets/empathy map 5.png";
+import businessmodel from "../assets/business model.png";
+import mindmap from "../assets/mind map 2.png";
+import persona from "../assets/Persona.png";
+import persona1 from "../assets/Persona-2.png";
 
 import Lightbox from "../components/Lightbox";
 import React, { useState, KeyboardEvent } from "react";
@@ -82,7 +91,7 @@ const CookingApp: React.FC = () => {
         <h3>Solution</h3>
         <p>
           In a team setting, we designed a cooking application suited to meet
-          the needs of college and young working professionals. The cooking
+          the needs of college students and young working professionals. The cooking
           application is tailored to finding and storing recipes, provide
           grocery shopping assistance, generate recipes with an AI bot, and
           track health and fitness goals. Additionally, users can join virtual
@@ -137,10 +146,7 @@ const CookingApp: React.FC = () => {
           <p>
             <strong>User Interviews</strong> — Conducted user interviews to
             identify what users like and don't like in existing cooking apps or
-            in their normal cooking routine. Findings from user interviews were
-            synthesized into <em>empathy maps</em> to identify what users do,
-            think, feel, and say when thinking about and performing the action
-            of recipe finding and cooking.
+            in their normal cooking routine.
           </p>
         </div>
 
@@ -148,10 +154,60 @@ const CookingApp: React.FC = () => {
           <p>
             <strong>Empathy Mapping & Persona Development</strong> — Developed
             empathy maps and user personas to represent primary user groups of
-            busy students and young professionals. These personas guided design
+            busy students and young professionals. Findings from user interviews were
+            synthesized into <em>empathy maps</em> to identify what users do,
+            think, feel, and say when thinking about and performing the action
+            of recipe finding and cooking. Personas guided design
             priorities such as fast recipe discovery, grocery list integration,
             and AI-driven personalization.
           </p>
+          <figure className="project-figure">
+            <ZoomableImg
+              src={empathy1}
+              alt="Empathy map 1"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={empathy2}
+              alt="Empathy map 2"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={empathy3}
+              alt="Empathy map 3"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={empathy4}
+              alt="Empathy map 4"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={empathy5}
+              alt="Empathy map 5"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={persona1}
+              alt="Persona generation 1"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={persona}
+              alt="Persona generation 2"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <figcaption>
+              <strong>Figure 1.</strong> Empathy maps and personas created from information gathered from the market analysis and user interviews.
+            </figcaption>
+          </figure>
         </div>
 
         <div className="subsection">
@@ -162,6 +218,25 @@ const CookingApp: React.FC = () => {
             partnerships with local grocers for ingredient delivery integration
             and brand sponsorships for cookware or health products.
           </p>
+
+          <figure className="project-figure">
+            <ZoomableImg
+              src={businessmodel}
+              alt="Business model"
+              className="project-image"
+              onZoom={openLB}
+            />
+            <ZoomableImg
+              src={mindmap}
+              alt="Mind Map"
+              className="project-image"
+              onZoom={openLB}
+            />
+
+            <figcaption>
+              <strong>Figure 2.</strong> Business model and mind map.
+            </figcaption>
+          </figure>
         </div>
 
         <div className="subsection">
@@ -170,17 +245,6 @@ const CookingApp: React.FC = () => {
             initial layout and component arrangement to visualize the cooking
             app. High-fidelity prototyping in Adobe XD allowed stakeholders to
             preview interaction flow and provide usability feedback.
-          </p>
-          <p>
-            You can explore the High-Fidelity prototype here:{" "}
-            <a
-              href="https://xd.adobe.com/view/e740af88-b63b-4e38-95d5-d20c346ec112-b213/?fullscreen&hints=off"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              View High-Fidelity Prototype →
-            </a>
           </p>
 
           <figure className="project-figure">
@@ -213,6 +277,17 @@ const CookingApp: React.FC = () => {
               concept and component arrangement for the cooking app.
             </figcaption>
           </figure>
+          <p>
+
+            <a
+              href="https://xd.adobe.com/view/e740af88-b63b-4e38-95d5-d20c346ec112-b213/?fullscreen&hints=off"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View high-fidelity prototype →
+            </a>
+          </p>
         </div>
 
         <div className="subsection">
@@ -258,14 +333,14 @@ const CookingApp: React.FC = () => {
             documented.
           </p>
           <p>
-            You can explore the Design Process Documentation here:{" "}
+
             <a
               href="https://new.express.adobe.com/webpage/YymhqsgX752Mw"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
             >
-              View Design Process Documentation →
+              View design process documentation →
             </a>
           </p>
         </div>
@@ -285,7 +360,7 @@ const CookingApp: React.FC = () => {
       <section className="project-section">
         <h3>Reflection</h3>
         <p>
-          This work sharpened my approach to mobile UX: prioritizing choice
+          This work sharpened my approach to UI design: prioritizing choice
           reduction, clear hierarchy, and accessible controls for fast,
           low-friction tasks. Collaborating in a multidisciplinary team helped
           me articulate trade-offs, defend design decisions with user evidence,

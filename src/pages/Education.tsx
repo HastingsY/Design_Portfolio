@@ -104,23 +104,6 @@ const Education = () => {
               <img className="experience-logo-MSU" src={MSU} alt="MSU logo" />
               <div className="experience-text">
                 <h3>
-                  UI Designer & Developer, Montana State University Software
-                  Engineering and Cybersecurity Lab (2025)
-                </h3>
-                <p>
-                  Designed and developed a web visualizer to display PIQUE
-                  software quality model data. Collaborated with stakeholders to
-                  transform JSON outputs into interactive visual cards. Applied
-                  user research, wireframing, and usability testing to enhance
-                  workflow clarity and accessibility.
-                </p>
-              </div>
-            </div>
-
-            <div className="experience-item">
-              <img className="experience-logo-MSU" src={MSU} alt="MSU logo" />
-              <div className="experience-text">
-                <h3>
                   UI/UX Designer, Montana State University UI Design Course
                   (2025)
                 </h3>
@@ -135,11 +118,28 @@ const Education = () => {
             </div>
 
             <div className="experience-item">
+              <img className="experience-logo-MSU" src={MSU} alt="MSU logo" />
+              <div className="experience-text">
+                <h3>
+                  UI Designer & Developer, Montana State University Software
+                  Engineering and Cybersecurity Laboratory (2025)
+                </h3>
+                <p>
+                  Designed and developed a web visualizer to display PIQUE
+                  software quality model data. Collaborated with stakeholders to
+                  transform JSON outputs into interactive visual cards. Applied
+                  user research, wireframing, and usability testing to enhance
+                  workflow clarity and accessibility.
+                </p>
+              </div>
+            </div>
+
+            <div className="experience-item">
               <img className="experience-logo" src={ESS} alt="ESS logo" />
               <div className="experience-text">
                 <h3>
                   UI Designer & Developer, University of Utah School of
-                  Environment, Society & Sustainability SAGE Lab (2022)
+                  Environment, Society & Sustainability SAGE Laboratory (2022)
                 </h3>
                 <p>
                   Designed an environmental dashboard showcasing water quality,

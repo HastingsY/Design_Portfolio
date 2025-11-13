@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/Pages.css";
 
-// Import the PDF from your assets folder (adjust filename if needed)
 import cvPdf from "../assets/Hastings_CV_PhD_updated_Oct_2025.pdf";
 
 const CV = () => {

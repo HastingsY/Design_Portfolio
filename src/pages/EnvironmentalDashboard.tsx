@@ -84,17 +84,6 @@ const EnvironmentalDashboard: React.FC = () => {
           spatial and temporal trends, and monitor site performance in real
           time.
         </p>
-        <p>
-          You can explore the live dashboard here:{" "}
-          <a
-            href="https://landscape-lab.chpc.utah.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link"
-          >
-            View Environmental Dashboard →
-          </a>
-        </p>
       </section>
 
       <section className="project-section">
@@ -207,6 +196,16 @@ const EnvironmentalDashboard: React.FC = () => {
             hydrology, chemistry, and maintenance datasets.
           </figcaption>
         </figure>
+        <p>
+          <a
+            href="https://landscape-lab.chpc.utah.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            View Environmental Dashboard →
+          </a>
+        </p>
       </section>
 
       <section className="project-section">
@@ -231,7 +230,7 @@ const EnvironmentalDashboard: React.FC = () => {
             rel="noopener noreferrer"
           >
             University of Utah's School of Environment, Society & Sustainability
-            SAGE Lab
+            SAGE Laboratory
           </a>
           .
         </div>

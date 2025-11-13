@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* ------- Form layout (keep) ------- */
+/* ------- Form layout  ------- */
 .contact-form {
   max-width: 640px;
   margin: 16px auto;
@@ -69,7 +69,7 @@
   color: #777;
 }
 
-/* ------- Buttons (keep) ------- */
+/* ------- Buttons ------- */
 .btn.btn-primary {
   background: #0a58ca;
   color: #fff;
@@ -88,8 +88,25 @@
   cursor: not-allowed;
 }
 
-/* ------- Typography helper (keep) ------- */
+/* ------- Typography helper ------- */
 .font {
   font-size: 18px;
   margin-left: 130px;
+}
+
+/* ------- Mobile tweaks ------- */
+@media (max-width: 768px) {
+  .contact-center {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .btn.btn-primary {
+    width: 100%;
+    /* full-width button on small screens */
+  }
+
+  .font {
+    font-size: 16px;
+  }
 }

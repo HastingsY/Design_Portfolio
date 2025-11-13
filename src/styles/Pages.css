@@ -23,26 +23,29 @@ html {
 }
 
 .main-content {
-  margin: 210px auto 80px; /* balanced top/bottom spacing */
+  margin: 210px auto 80px;
+  /* balanced top/bottom spacing */
   width: 85%;
   padding: 20px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontal centering */
-  justify-content: flex-start; /* keeps top-aligned content */
+  align-items: center;
+  /* horizontal centering */
+  justify-content: flex-start;
+  /* keeps top-aligned content */
   background-color: #ffffff;
   color: darkslategrey;
 }
 
 .container,
-.main-content > section,
-.main-content > div {
+.main-content>section,
+.main-content>div {
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.main-content.centered > div {
+.main-content.centered>div {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
@@ -53,6 +56,7 @@ html {
 .main-content a:visited {
   color: #0a58ca;
 }
+
 .main-content a:hover {
   text-decoration: underline;
 }
@@ -64,14 +68,18 @@ html {
 }
 
 .card-rail {
-  position: sticky; /* magic */
-  top: var(--header-offset, 16px); /* clear your fixed header if needed */
-  align-self: start; /* ensure it starts at the top of its grid cell */
-  max-height: calc(
-    100vh - var(--header-offset, 16px) - 16px
-  ); /* full viewport height minus header + a little padding */
-  overflow-y: auto; /* vertical scroll inside the rail */
-  overflow-x: hidden; /* no horizontal scroll */
+  position: sticky;
+  /* magic */
+  top: var(--header-offset, 16px);
+  /* clear your fixed header if needed */
+  align-self: start;
+  /* ensure it starts at the top of its grid cell */
+  max-height: calc(100vh - var(--header-offset, 16px) - 16px);
+  /* full viewport height minus header + a little padding */
+  overflow-y: auto;
+  /* vertical scroll inside the rail */
+  overflow-x: hidden;
+  /* no horizontal scroll */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -186,6 +194,12 @@ html {
   margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+  .cv-viewport {
+    height: 60vh;
+  }
+}
+
 .btn-row {
   display: flex;
   gap: 8px;
@@ -200,7 +214,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* higher than your header/footer */
+  z-index: 1000;
+  /* higher than your header/footer */
   padding: 2rem;
 }
 
@@ -219,7 +234,8 @@ html {
 /* Close button */
 .modal-close {
   position: absolute;
-  top: 8px; /* a bit down so it isn't clipped */
+  top: 8px;
+  /* a bit down so it isn't clipped */
   right: 10px;
   width: 36px;
   height: 36px;
@@ -229,23 +245,29 @@ html {
   background: #fff;
   color: #000;
   font-size: 22px;
-  border: none; /* remove default border */
-  outline: none; /* remove default outline (we'll style focus below) */
-  border-radius: 8px; /* optional; tweak as you like */
-  -webkit-appearance: none; /* normalize Safari */
+  border: none;
+  /* remove default border */
+  outline: none;
+  /* remove default outline (we'll style focus below) */
+  border-radius: 8px;
+  /* optional; tweak as you like */
+  -webkit-appearance: none;
+  /* normalize Safari */
   appearance: none;
   cursor: pointer;
   transition:
     background 0.2s ease,
     box-shadow 0.2s ease;
 }
+
 .modal-close:hover {
   border: none;
   background: lightgrey;
 }
 
 .modal-close:focus-visible {
-  outline: 2px solid #0d48a0; /* or white if on dark header */
+  outline: 2px solid #0d48a0;
+  /* or white if on dark header */
   outline-offset: 2px;
   box-shadow: 0 0 0 3px rgba(13, 72, 160, 0.25);
 }
@@ -259,12 +281,16 @@ html {
 
 @media (max-width: 768px) {
   .about {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
+    /* single column */
     gap: 20px;
-    justify-items: center; /* center the photo */
+    justify-items: center;
+    /* center the photo */
   }
+
   .aboutMeText {
-    max-width: 60ch; /* comfortable line length */
+    max-width: 60ch;
+    /* comfortable line length */
     text-align: left;
   }
 }
