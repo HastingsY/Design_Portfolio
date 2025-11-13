@@ -9,8 +9,14 @@ const CV = () => {
   return (
     <div className="app-container">
       <Header />
-      <main className="main-content">
-        <div className="CV">
+      <main className="main-content centered">
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            transform: "translate(-50%, -0%)",
+          }}
+        >
           <h2 className="pageTitle">
             <strong>Curriculum Vitae</strong>
           </h2>

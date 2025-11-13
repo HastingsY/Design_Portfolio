@@ -42,12 +42,25 @@ html {
   padding: 0 24px;
 }
 
+.main-content.centered > div {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
 .main-content a,
 .main-content a:visited {
   color: #0a58ca;
 }
 .main-content a:hover {
   text-decoration: underline;
+}
+
+.centered-page {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .card-rail {
@@ -150,11 +163,15 @@ html {
   color: #124191;
   margin-bottom: -5px;
 }
+
 .CV {
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
 }
 
 .cv-viewport {

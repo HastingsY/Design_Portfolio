@@ -1,9 +1,12 @@
 /* ------- Absolute center for the whole contact block ------- */
 .contact-center {
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 900px;
+  box-sizing: border-box;
 }
 
 /* ------- Form layout (keep) ------- */
@@ -28,6 +31,10 @@
 .form-error {
   color: #b71c1c;
   font-weight: 600;
+}
+
+.centered-page form {
+  text-align: left;
 }
 
 /* ---------- Form field color and focus styles ---------- */
@@ -84,4 +91,5 @@
 /* ------- Typography helper (keep) ------- */
 .font {
   font-size: 18px;
+  margin-left: 130px;
 }
