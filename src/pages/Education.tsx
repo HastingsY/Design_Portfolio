@@ -51,7 +51,7 @@ const Education = () => {
             </h2>
             <ul>
               <li>
-                <strong>Survey: </strong>Qualtrics, Google Analytics
+                <strong>Survey: </strong>Qualtrics, Google Forms
               </li>
               <li>
                 <strong>Design: </strong>Figma, Adobe XD, Adobe Illustrator, MS
