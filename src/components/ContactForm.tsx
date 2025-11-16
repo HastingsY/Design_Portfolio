@@ -3,9 +3,16 @@ import "../styles/Contact.css";
 
 type ApiResult = { ok: boolean; message: string };
 
-const ThankYouModal: React.FC<{ open: boolean; onClose: () => void }> = ({
+type ThankYouModalProps = {
+  open: boolean;
+  onClose: () => void;
+  userName?: string;
+};
+
+const ThankYouModal: React.FC<ThankYouModalProps> = ({
   open,
   onClose,
+  userName,
 }) => {
   if (!open) return null;
 
@@ -23,7 +30,7 @@ const ThankYouModal: React.FC<{ open: boolean; onClose: () => void }> = ({
         role="document"
       >
         <h3 id="thanks-title" style={{ marginTop: 0 }}>
-          Thanks for reaching out!
+          Thanks for reaching out{userName ? `, ${userName}` : ""}!
         </h3>
         <p>
           Your message was sent successfully. I’ll get back to you as soon as I
@@ -41,6 +48,12 @@ const ContactForm: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<ApiResult | null>(null);
   const [showThanks, setShowThanks] = useState(false);
+
+  // Tracks what the user is typing in the Name field
+  const [nameInput, setNameInput] = useState("");
+
+  // Holds the name we show in the thank-you modal
+  const [thankName, setThankName] = useState("");
 
   const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as
     | string
@@ -73,9 +86,15 @@ const ContactForm: React.FC = () => {
       const json = await res.json();
 
       if (json.success) {
+        // Save the submitted name for the modal
+        setThankName(nameInput);
+
         setResult({ ok: true, message: "Message sent successfully." });
-        form.reset();
         setShowThanks(true);
+
+        // Clear the form fields
+        form.reset();
+        setNameInput("");
       } else {
         setResult({
           ok: false,
@@ -110,6 +129,8 @@ const ContactForm: React.FC = () => {
             type="text"
             required
             placeholder="Your name"
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
           />
         </div>
 
@@ -170,7 +191,11 @@ const ContactForm: React.FC = () => {
         )}
       </form>
 
-      <ThankYouModal open={showThanks} onClose={() => setShowThanks(false)} />
+      <ThankYouModal
+        open={showThanks}
+        onClose={() => setShowThanks(false)}
+        userName={thankName}
+      />
     </>
   );
 };
