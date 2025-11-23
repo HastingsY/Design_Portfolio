@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect } from "react";
 
 interface ImageModalProps {
@@ -7,6 +7,8 @@ interface ImageModalProps {
   onClose: () => void;
   imageSrc: string;
   imageAlt: string;
+  onNext?: () => void;
+  onPrev?: () => void;
 }
 
 export function ImageModal({
@@ -14,26 +16,31 @@ export function ImageModal({
   onClose,
   imageSrc,
   imageAlt,
+  onNext,
+  onPrev,
 }: ImageModalProps) {
   // Close modal on Escape key press
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         onClose();
+      } else if (e.key === "ArrowRight" && onNext) {
+        onNext();
+      } else if (e.key === "ArrowLeft" && onPrev) {
+        onPrev();
       }
     };
 
     if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      // Prevent body scroll when modal is open
+      document.addEventListener("keydown", handleKey);
       document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("keydown", handleKey);
       document.body.style.overflow = "unset";
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, onNext, onPrev]);
 
   return (
     <AnimatePresence>
@@ -72,6 +79,37 @@ export function ImageModal({
               >
                 <X className="w-6 h-6" />
               </button>
+
+              {/* Stacked Prev/Next controls on the right */}
+              {(onPrev || onNext) && (
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+                  {onPrev && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onPrev();
+                      }}
+                      className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-slate-100 transition-colors"
+                      aria-label="Previous image"
+                    >
+                      <ChevronLeft className="w-6 h-6" />
+                    </button>
+                  )}
+
+                  {onNext && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onNext();
+                      }}
+                      className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-slate-100 transition-colors"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight className="w-6 h-6" />
+                    </button>
+                  )}
+                </div>
+              )}
 
               {/* Image */}
               <motion.img

@@ -1,25 +1,20 @@
 import { useState } from "react";
-import { motion } from "motion/react";
 import {
   Mail,
   Linkedin,
   Github,
-  Twitter,
   Send,
   MapPin,
   Phone,
   Loader2,
 } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
+
+const KEY = "757e5b8b-cafc-4a13-9728-850d0b404b65";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -32,27 +27,56 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // simple guard if env var is missing
+    if (!KEY) {
+      toast.error("Contact form is not configured correctly.");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    toast.success(
-      "Message sent successfully! I'll get back to you soon.",
-    );
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(
+          result.message || "Something went wrong. Please try again."
+        );
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Network error. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -96,9 +120,9 @@ export function Contact() {
         Get In Touch
       </h1>
       <p className="text-slate-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
-        Have a project in mind or want to collaborate? I'd love
-        to hear from you. Feel free to reach out through the
-        form or connect with me on social media.
+        Have a project in mind or want to collaborate? I'd love to hear from
+        you. Feel free to reach out through the form or connect with me on
+        social media.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
@@ -119,9 +143,7 @@ export function Contact() {
                 >
                   <Icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <p className="text-slate-600 mb-1">
-                  {info.label}
-                </p>
+                <p className="text-slate-600 mb-1">{info.label}</p>
                 <p className="text-slate-800">{info.value}</p>
               </CardContent>
             </Card>
@@ -154,15 +176,9 @@ export function Contact() {
               aria-label="Contact form"
             >
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-slate-700 mb-2"
-                >
+                <label htmlFor="name" className="block text-slate-700 mb-2">
                   Name{" "}
-                  <span
-                    className="text-red-600"
-                    aria-label="required"
-                  >
+                  <span className="text-red-600" aria-label="required">
                     *
                   </span>
                 </label>
@@ -178,15 +194,9 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-slate-700 mb-2"
-                >
+                <label htmlFor="email" className="block text-slate-700 mb-2">
                   Email{" "}
-                  <span
-                    className="text-red-600"
-                    aria-label="required"
-                  >
+                  <span className="text-red-600" aria-label="required">
                     *
                   </span>
                 </label>
@@ -203,15 +213,9 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-slate-700 mb-2"
-                >
+                <label htmlFor="subject" className="block text-slate-700 mb-2">
                   Subject{" "}
-                  <span
-                    className="text-red-600"
-                    aria-label="required"
-                  >
+                  <span className="text-red-600" aria-label="required">
                     *
                   </span>
                 </label>
@@ -227,15 +231,9 @@ export function Contact() {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-slate-700 mb-2"
-                >
+                <label htmlFor="message" className="block text-slate-700 mb-2">
                   Message{" "}
-                  <span
-                    className="text-red-600"
-                    aria-label="required"
-                  >
+                  <span className="text-red-600" aria-label="required">
                     *
                   </span>
                 </label>
@@ -263,10 +261,7 @@ export function Contact() {
                     aria-hidden="true"
                   />
                 ) : (
-                  <Send
-                    className="w-4 h-4 mr-2"
-                    aria-hidden="true"
-                  />
+                  <Send className="w-4 h-4 mr-2" aria-hidden="true" />
                 )}
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
@@ -281,13 +276,10 @@ export function Contact() {
             </CardHeader>
             <CardContent>
               <p className="text-slate-600 mb-6">
-                Follow me on social media to stay updated with
-                my latest work and insights on UI/UX design.
+                Follow me on social media to stay updated with my latest work
+                and insights on UI/UX design.
               </p>
-              <nav
-                className="flex gap-4"
-                aria-label="Social media links"
-              >
+              <nav className="flex gap-4" aria-label="Social media links">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -299,10 +291,7 @@ export function Contact() {
                       className={`p-3 bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 ${social.color}`}
                       aria-label={`Visit my ${social.label} profile`}
                     >
-                      <Icon
-                        className="w-6 h-6"
-                        aria-hidden="true"
-                      />
+                      <Icon className="w-6 h-6" aria-hidden="true" />
                     </a>
                   );
                 })}
@@ -331,9 +320,8 @@ export function Contact() {
                   </p>
                 </div>
                 <p className="text-slate-600">
-                  I'm a student balancing academics and
-                  freelance work. Typical response time is 24-48
-                  hours.
+                  I'm a student balancing academics and freelance work. Typical
+                  response time is 24-48 hours.
                 </p>
               </div>
             </CardContent>

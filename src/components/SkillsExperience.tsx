@@ -18,12 +18,34 @@ import { BeakerIcon } from "../components/BeakerIcon";
 
 export function SkillsExperience() {
   const skills = [
-    { name: "UI Design", level: 93, icon: Palette },
-    { name: "UX Research", level: 90, icon: Users },
-    { name: "Prototyping", level: 88, icon: Zap },
-    { name: "Interaction Design", level: 90, icon: Layers },
-    { name: "Design Thinking", level: 89, icon: Lightbulb },
-    { name: "Front-end Basics", level: 75, icon: Code },
+    {
+      name: "UI Design",
+      level: 90,
+      icon: Palette,
+      description:
+        "Designing intuitive, accessible interfaces using layout, typography, color, and design systems to communicate information clearly and support user goals.",
+    },
+    {
+      name: "UX Research",
+      level: 90,
+      icon: Users,
+      description:
+        "Conducting usability tests, interviews, surveys, and heuristic evaluations to understand user needs, frustrations, and workflows, optimizing research-backed design decisions.",
+    },
+    {
+      name: "Prototyping",
+      level: 88,
+      icon: Zap,
+      description:
+        "Creating interactive low- to high-fidelity prototypes in Figma and Adobe XD to explore user flows, validate ideas early, and communicate design intent to stakeholders and developers.",
+    },
+    {
+      name: "Front-end Basics",
+      level: 75,
+      icon: Code,
+      description:
+        "Building responsive layouts and interactive components using HTML, CSS, JavaScript/TypeScript, and React fundamentals to bridge design and development.",
+    },
   ];
 
   const toolCategories = [
@@ -69,7 +91,12 @@ export function SkillsExperience() {
       ],
     },
     {
-      category: "Frontend Development",
+      category: "Development Environments",
+      icon: Code,
+      tools: ["VS Code", "IntelliJ", "R Studio"],
+    },
+    {
+      category: "Front-end Development",
       icon: Code,
       tools: ["HTML/CSS", "JavaScript/TypeScript", "React", "RShiny"],
     },
@@ -77,11 +104,6 @@ export function SkillsExperience() {
       category: "Programming Languages",
       icon: Code,
       tools: ["R", "Python", "Java", "SQL", "MATLAB"],
-    },
-    {
-      category: "Development Environments",
-      icon: Code,
-      tools: ["VS Code", "IntelliJ", "R Studio"],
     },
     {
       category: "Documentation",
@@ -100,15 +122,15 @@ export function SkillsExperience() {
       title: "Human Centric Software Quality Analyst",
       subtitle: "Graduate Research Assistant",
       company:
-        "Montana State University - Software Engineering & Cybersecurity Lab",
+        "Montana State University - Software Engineering & Cyber Security Lab",
       period: "2023 - Present",
-      website: "montana.edu",
+      website: "montana.edu/cyber",
       logo: msuLogo,
       highlights: [
-        "Conduct user research and usability testing to evaluate software quality from a human-centered perspective",
-        "Design and implement surveys and interview protocols to gather user feedback on research software tools",
-        "Collaborate with development teams to translate user needs into actionable UI/UX improvements",
-        "Create data visualizations and reports to communicate research findings to diverse stakeholders",
+        "Conducted user research and usability testing to evaluate software quality from a human-centered perspective",
+        "Designed and implement surveys and interview protocols to gather user feedback on research software tools",
+        "Collaborated with development teams to translate user needs into actionable UI/UX improvements",
+        "Created data visualizations and reports to communicate research findings to diverse stakeholders",
       ],
     },
     {
@@ -129,7 +151,7 @@ export function SkillsExperience() {
       title: "Inorganic Chemistry Assistant Supervisor",
       company: "American West Analytical Labs",
       period: "2016 - 2020",
-      website: "americanwestlabs.com",
+      website: "",
       logo: BeakerIcon,
       highlights: [
         "Trained 30+ employees on EPA and laboratory methods",
@@ -180,6 +202,10 @@ export function SkillsExperience() {
                       />
                     </div>
                   </div>
+                  {/* Description */}
+                  <p className="text-sm text-slate-600 leading-relaxed italic text-center mt-2">
+                    {skill.description}
+                  </p>
                 </CardContent>
               </Card>
             );
@@ -209,7 +235,7 @@ export function SkillsExperience() {
                 </CardHeader>
                 <CardContent>
                   <div
-                    className="flex flex-wrap gap-2"
+                    className="flex flex-wrap gap-2 justify-center text-center"
                     role="list"
                     aria-label={`${toolCategory.category} tools`}
                   >
@@ -263,7 +289,18 @@ export function SkillsExperience() {
                           {job.subtitle}
                         </p>
                       )}
-                      <p className="text-blue-600">{job.company}</p>
+                      {job.website ? (
+                        <a
+                          href={`https://${job.website}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          {job.company}
+                        </a>
+                      ) : (
+                        <p className="text-slate-700">{job.company}</p>
+                      )}
                     </div>
                   </div>
                   <Badge variant="outline" className="self-start">
