@@ -2,25 +2,16 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { FileText, Download, Camera } from "lucide-react";
 import { Button } from "./ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "./ui/dialog";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Testimonials } from "./Testimonials";
 import profilePic from "../assets/picture.jpg";
 import cvPdf from "../assets/Hastings_CV_PhD_updated_Oct_2025.pdf";
 import horse from "../assets/horseriding.jpg";
 import kayaking from "../assets/kayaking.jpg";
-import tetons from "../assets/tetons.jpg";
 import speedlimit from "../assets/speedlimit.jpg";
 import albania from "../assets/PXL_20230905_092458911.jpg";
 
 export function AboutMe() {
-  const [cvOpen, setCvOpen] = useState(false);
   const cvPdfPath = cvPdf;
 
   const handleViewCV = () => {

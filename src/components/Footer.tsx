@@ -1,31 +1,35 @@
-import { Link } from 'react-router-dom';
-import { Linkedin, Github } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Linkedin, Github } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navigationLinks = [
-    { name: 'About', path: '/' },
-    { name: 'Skills & Experience', path: '/skills' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About Me", path: "/about" },
+    { name: "Skills & Experience", path: "/skills" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const socialLinks = [
     {
       icon: Linkedin,
-      label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/yvette-hastings-2a47231b',
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/yvette-hastings-2a47231b",
     },
     {
       icon: Github,
-      label: 'GitHub',
-      url: 'https://github.com/HastingsY',
+      label: "GitHub",
+      url: "https://github.com/HastingsY",
     },
   ];
 
   return (
-    <footer className="bg-white border-t border-slate-200 mt-auto" role="contentinfo">
+    <footer
+      className="bg-white border-t border-slate-200 mt-auto"
+      role="contentinfo"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Navigation Links */}

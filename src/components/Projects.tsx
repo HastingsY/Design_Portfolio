@@ -133,7 +133,7 @@ export function Projects() {
         transition={{ duration: 0.6 }}
         className="mt-16 text-center"
       >
-        <Card className="bg-gradient-to-br from-blue-600 to-purple-600 text-white border-0">
+        <Card className="bg-blue-600 text-white border-0">
           <CardContent className="py-12">
             <h3 className="text-3xl font-extrabold mb-4">Like what you see?</h3>
             <p className="text-xl mb-8 text-white/90">
