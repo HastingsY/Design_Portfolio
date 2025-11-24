@@ -102,7 +102,7 @@ export function ProjectDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="grid grid-cols-3 md:grid-cols-5 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
         >
           {/* Year */}
           <Card>

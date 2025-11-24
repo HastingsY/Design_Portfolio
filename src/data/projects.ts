@@ -236,7 +236,7 @@ export const projects: ProjectData[] = [
         links: [
           {
             text: "View Prototype Here",
-            url: "https://xd.adobe.com/view/1870bf09-5eb6-497a-b930-860a92633fb1-4d23/",
+            url: "https://xd.adobe.com/view/1870bf09-5eb6-497a-b930-860a92633fb1-4d23/?fullscreen",
           },
         ],
       },
