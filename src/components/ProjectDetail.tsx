@@ -102,7 +102,7 @@ export function ProjectDetail() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+          className="grid md:grid-cols-4 gap-6 mb-12"
         >
           {/* Year */}
           <Card>
@@ -139,7 +139,14 @@ export function ProjectDetail() {
               <p className="font-semibold text-slate-900">{project.team}</p>
             </CardContent>
           </Card>
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="grid md:grid-cols-2 gap-6 mb-12"
+        >
           {/* Tools & Technologies – row 2, right column */}
           <Card>
             <CardContent className="pt-6 text-center">
@@ -381,11 +388,10 @@ export function ProjectDetail() {
                       key={phase.key}
                       type="button"
                       onClick={() => setActivePhase(phase.key)}
-                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-lg font-semibold border transition-colors ${
-                        isActive
-                          ? "bg-blue-600 text-white border-blue-600 shadow-sm"
-                          : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
-                      }`}
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-lg font-semibold border transition-colors ${isActive
+                        ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                        : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
+                        }`}
                     >
                       <span className="text-lg">{phase.icon}</span>
                       <span>{phase.title}</span>
@@ -505,9 +511,8 @@ export function ProjectDetail() {
                                   >
                                     <ImageWithFallback
                                       src={img}
-                                      alt={`${phaseDef.title} phase image ${
-                                        imgIndex + 1
-                                      }`}
+                                      alt={`${phaseDef.title} phase image ${imgIndex + 1
+                                        }`}
                                       className="w-full h-64 object-cover"
                                     />
                                   </motion.div>
@@ -716,10 +721,10 @@ export function ProjectDetail() {
           onPrev={
             modalImages.length > 1
               ? () =>
-                  setModalIndex(
-                    (prev) =>
-                      (prev - 1 + modalImages.length) % modalImages.length
-                  )
+                setModalIndex(
+                  (prev) =>
+                    (prev - 1 + modalImages.length) % modalImages.length
+                )
               : undefined
           }
         />
