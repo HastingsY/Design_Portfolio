@@ -3,7 +3,6 @@ import {
   Code,
   Users,
   Lightbulb,
-  Layers,
   Zap,
   Wrench,
   BarChart3,
@@ -20,14 +19,14 @@ export function SkillsExperience() {
   const skills = [
     {
       name: "UI Design",
-      level: 90,
+      level: 80,
       icon: Palette,
       description:
         "Designing intuitive, accessible interfaces using layout, typography, color, and design systems to communicate information clearly and support user goals.",
     },
     {
       name: "UX Research",
-      level: 90,
+      level: 80,
       icon: Users,
       description:
         "Conducting usability tests, interviews, surveys, and heuristic evaluations to understand user needs, frustrations, and workflows, optimizing research-backed design decisions.",
@@ -41,7 +40,7 @@ export function SkillsExperience() {
     },
     {
       name: "Front-end Basics",
-      level: 75,
+      level: 60,
       icon: Code,
       description:
         "Building responsive layouts and interactive components using HTML, CSS, JavaScript/TypeScript, and React fundamentals to bridge design and development.",
@@ -103,7 +102,7 @@ export function SkillsExperience() {
     {
       category: "Programming Languages",
       icon: Code,
-      tools: ["R", "Python", "Java", "SQL", "MATLAB"],
+      tools: ["R", "Python", "Java", "SQL"],
     },
     {
       category: "Documentation",
@@ -123,7 +122,7 @@ export function SkillsExperience() {
       subtitle: "Graduate Research Assistant",
       company:
         "Montana State University - Software Engineering & Cyber Security Lab",
-      period: "2023 - Present",
+      period: "2023 - 2026",
       website: "montana.edu/cyber",
       logo: msuLogo,
       highlights: [

@@ -118,7 +118,7 @@ export function Hero() {
               className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-slate-200"
             >
               <div className="text-center lg:text-left">
-                <p className="text-3xl font-bold text-slate-900">3+</p>
+                <p className="text-3xl font-bold text-slate-900">4+</p>
                 <p className="text-sm text-slate-600">Years Experience</p>
               </div>
               <div className="text-center lg:text-left">

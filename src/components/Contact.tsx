@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  Mail,
-  Linkedin,
-  Github,
-  Send,
-  MapPin,
-  Phone,
-  Loader2,
-} from "lucide-react";
+import { Mail, Linkedin, Github, Send, MapPin, Loader2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -64,7 +56,7 @@ export function Contact() {
         });
       } else {
         toast.error(
-          result.message || "Something went wrong. Please try again."
+          result.message || "Something went wrong. Please try again.",
         );
       }
     } catch (err) {
@@ -76,7 +68,7 @@ export function Contact() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -88,8 +80,8 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "yvettehastings@montana.edu",
-      link: "mailto:yvettehastings@montana.edu",
+      value: "yvettehastings6@gmail.com",
+      link: "mailto:yvettehastings6@gmail.com",
     },
     {
       icon: MapPin,

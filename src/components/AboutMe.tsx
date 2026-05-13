@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { FileText, Download, Camera } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Testimonials } from "./Testimonials";
 import profilePic from "../assets/picture.jpg";
-import cvPdf from "../assets/Hastings_CV_PhD_updated_Oct_2025.pdf";
+import cvPdf from "../assets/Hastings_CV_updated_May_2026.pdf";
 import horse from "../assets/horseriding.jpg";
 import kayaking from "../assets/kayaking.jpg";
 import speedlimit from "../assets/speedlimit.jpg";
@@ -163,7 +162,7 @@ export function AboutMe() {
             role="img"
             aria-label="5 plus years of experience"
           >
-            <p className="text-lg font-bold">3+ Years</p>
+            <p className="text-lg font-bold">4+ Years</p>
             <p className="text-sm opacity-90">Experience</p>
           </motion.div>
         </motion.div>
