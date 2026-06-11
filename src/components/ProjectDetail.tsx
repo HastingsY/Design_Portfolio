@@ -388,10 +388,11 @@ export function ProjectDetail() {
                       key={phase.key}
                       type="button"
                       onClick={() => setActivePhase(phase.key)}
-                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-lg font-semibold border transition-colors ${isActive
-                        ? "bg-blue-600 text-white border-blue-600 shadow-sm"
-                        : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
-                        }`}
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-lg font-semibold border transition-colors ${
+                        isActive
+                          ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                          : "bg-white text-slate-700 border-slate-200 hover:bg-slate-50"
+                      }`}
                     >
                       <span className="text-lg">{phase.icon}</span>
                       <span>{phase.title}</span>
@@ -444,7 +445,7 @@ export function ProjectDetail() {
                                 const bullets = lines
                                   .slice(1)
                                   .filter((line) =>
-                                    line.trim().startsWith("•")
+                                    line.trim().startsWith("•"),
                                   );
 
                                 return (
@@ -511,8 +512,9 @@ export function ProjectDetail() {
                                   >
                                     <ImageWithFallback
                                       src={img}
-                                      alt={`${phaseDef.title} phase image ${imgIndex + 1
-                                        }`}
+                                      alt={`${phaseDef.title} phase image ${
+                                        imgIndex + 1
+                                      }`}
                                       className="w-full h-64 object-cover"
                                     />
                                   </motion.div>
@@ -551,6 +553,49 @@ export function ProjectDetail() {
                 );
               })()}
             </motion.section>
+
+            {/* Technical Implementation */}
+            {project.technicalImplementation && (
+              <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-extrabold text-slate-900 mb-4">
+                  Technical Implementation
+                </h2>
+                <Card>
+                  <CardContent className="pt-6 space-y-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-3">
+                        Design-to-Code Workflow
+                      </h3>
+                      <ul className="list-disc space-y-2 pl-6 text-lg text-slate-700 leading-relaxed">
+                        {project.technicalImplementation.designToCodeWorkflow.map(
+                          (item, index) => (
+                            <li key={index}>{item}</li>
+                          ),
+                        )}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-3">
+                        Engineering Challenges
+                      </h3>
+                      <ul className="list-disc space-y-2 pl-6 text-lg text-slate-700 leading-relaxed">
+                        {project.technicalImplementation.engineeringChallenges.map(
+                          (item, index) => (
+                            <li key={index}>{item}</li>
+                          ),
+                        )}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.section>
+            )}
 
             {/* Outcome */}
             {project.outcome && (
@@ -721,10 +766,10 @@ export function ProjectDetail() {
           onPrev={
             modalImages.length > 1
               ? () =>
-                setModalIndex(
-                  (prev) =>
-                    (prev - 1 + modalImages.length) % modalImages.length
-                )
+                  setModalIndex(
+                    (prev) =>
+                      (prev - 1 + modalImages.length) % modalImages.length,
+                  )
               : undefined
           }
         />
