@@ -4,12 +4,19 @@ import { writeFileSync } from "node:fs";
 const reportFlagIndex = process.argv.indexOf("--report");
 const reportPath = reportFlagIndex >= 0 ? process.argv[reportFlagIndex + 1] : null;
 
-const result = spawnSync("npm", ["audit", "--json"], { encoding: "utf8" });
+const isWindows = process.platform === "win32";
+const result = spawnSync(isWindows ? "npm.cmd" : "npm", ["audit", "--json"], {
+  encoding: "utf8",
+  shell: isWindows,
+});
 const stdout = (result.stdout || "").trim();
 const stderr = (result.stderr || "").trim();
 
 if (!stdout) {
   console.error("npm audit did not return JSON output.");
+  if (result.error) {
+    console.error(result.error);
+  }
   if (stderr) {
     console.error(stderr);
   }
